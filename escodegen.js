@@ -339,9 +339,9 @@
     function generateRegExp(reg) {
         var match, result, flags, i, iz, ch, characterInBrack, previousIsBackslash;
 
-        result = reg.toString();
+        result = reg && reg.toString();
 
-        if (reg.source) {
+        if (reg && reg.source) {
             // extract flag from toString result
             match = result.match(/\/([^/]*)$/);
             if (!match) {
